@@ -30,10 +30,10 @@ static int __init print_sched_entity_init(void) {
 
     se = &task->se;
 
-    pr_info("LKM_PID:sched_entity for PID %d:\n", pid);
-    pr_info("LKM_PID:Load Weight: %lu\n", se->load.weight);
-    pr_info("LKM_PID:Virtual Runtime: %llu\n", se->vruntime);
-    pr_info("LKM_PID:Execution Start Time: %llu\n", se->exec_start);
+    pr_info("LKM_PCB:sched_entity for PID %d:\n", pid);
+    pr_info("LKM_PCB:Load Weight: %lu\n", se->load.weight);
+    pr_info("LKM_PCB:Virtual Runtime: %llu\n", se->vruntime);
+    pr_info("LKM_PCB:Execution Start Time: %llu\n", se->exec_start);
 
     return 0;
 }

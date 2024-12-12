@@ -39,7 +39,7 @@ static int __init print_sched_entity_init(void) {
 }
 
 static void __exit print_sched_entity_exit(void) {
-    pr_info("Exiting module\n");
+    pr_info("LKM_PCB:Exiting module\n");
 }
 
 module_init(print_sched_entity_init);

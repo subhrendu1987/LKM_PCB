@@ -30,22 +30,22 @@ static int __init sched_class_init(void) {
 
     // Check the scheduler class and print its name
     if (task->sched_class == &fair_sched_class) {
-        printk(KERN_INFO "PID %d is using the fair scheduler class.\n", pid);
+        printk(KERN_INFO "LKM_SCHED:PID %d is using the fair scheduler class.\n", pid);
     } else if (task->sched_class == &rt_sched_class) {
-        printk(KERN_INFO "PID %d is using the real-time scheduler class.\n", pid);
+        printk(KERN_INFO "LKM_SCHED:PID %d is using the real-time scheduler class.\n", pid);
     } else if (task->sched_class == &idle_sched_class) {
-        printk(KERN_INFO "PID %d is using the idle scheduler class.\n", pid);
+        printk(KERN_INFO "LKM_SCHED:PID %d is using the idle scheduler class.\n", pid);
     } else if (task->sched_class == &dl_sched_class) {
-        printk(KERN_INFO "PID %d is using the deadline scheduler class.\n", pid);
+        printk(KERN_INFO "LKM_SCHED:PID %d is using the deadline scheduler class.\n", pid);
     } else {
-        printk(KERN_INFO "PID %d is using an unknown scheduler class.\n", pid);
+        printk(KERN_INFO "LKM_SCHED:PID %d is using an unknown scheduler class.\n", pid);
     }
 
     return 0;
 }
 
 static void __exit sched_class_exit(void) {
-    printk(KERN_INFO "Scheduler class module unloaded.\n");
+    printk(KERN_INFO "LKM_SCHED:Scheduler class module unloaded.\n");
 }
 
 module_init(sched_class_init);

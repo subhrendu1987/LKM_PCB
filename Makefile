@@ -1,8 +1,8 @@
 # Variables
 KERNEL_SRC := /lib/modules/$(shell uname -r)/build
 USER_PROG := set_pid_user_space
-MODULE1 := print_sched
-MODULE  := print_pcb_entity
+MODULE := print_sched
+#MODULE  := print_pcb_entity
 obj-m += $(MODULE).o
 
 # Default target
